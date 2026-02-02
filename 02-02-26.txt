@@ -1,0 +1,46 @@
+:::::::::admin panel create  :::::::::
+
+_____
+steps:-->
+-----
+
+1. install postgresql
+2. open postgresql
+3. show user name --> postgresql
+4. click on it and inside show database folder
+5. click on it 
+6. create database and name : learning26
+7.open vscode
+8.go to terminal and open cmd
+9.virtual environment enable
+10.type:
+    pip install psycopg2-binary
+11. go to setting.py
+12. write in database
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'learning26',
+        'USER': 'postgres',
+        'PASSWORD':'1234',
+        'HOST':'localhost',
+        'PORT':'5432',
+        }
+    }
+
+
+13. cd learning26 --> inside --> type:
+    now do migration....> type on terminal
+    python manage.py migrate---> built in table create inside your database "learning26".
+
+14.run on terminal:
+    python manage.py createsuperuser
+    |
+    |--> ask: username,password,again password,ask y/NAME
+
+--> type after to run --> python manage.py runserver
+
+15.Then open browser and write --> localhost/admin
+16. type ---> username:harshil,password:0312
+
+17.open admin panel
